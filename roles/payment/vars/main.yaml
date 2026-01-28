@@ -1,2 +1,2 @@
 RABBITMQ_USER= roboshop
-RABBITMQ_PASSWORD= roboshop123
+RABBITMQ_PASS= roboshop123
