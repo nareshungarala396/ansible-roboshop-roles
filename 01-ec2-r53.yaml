@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    ami_id: ami-09c813fb71547fc4f
+    ami_id: ami-0220d79f3f480ecf5
     sg_id: sg-0aeb617da8c1a4635 # replace with your SG ID
     zone_id: "Z00766771IYLZ1NDRMGM6" # replace with your ID
     domain_name: "nareshplace.fun"
