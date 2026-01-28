@@ -5,4 +5,6 @@ CART_HOST: cart.nareshplace.fun
 USER_HOST: cart.nareshplace.fun
 RABBITMQ_HOST: cart.nareshplace.fun
 MYSQL_HOST: mysql.nareshplace.fun 
+SHIPPING_HOST: shipping.nareshplace.fun
+PAYMENT_HOST: payment.nareshplace.fun
 
