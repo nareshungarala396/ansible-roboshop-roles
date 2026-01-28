@@ -1,0 +1,26 @@
+  - name: copy rabbit mq repocopy
+    ansible.builtin.copy:
+      src: rabbitmq.repo
+      dest: /etc/yum.repos.d/rabbitmq.repo
+
+  - name: install rabbitmq
+    ansible.builtin.package:
+      install: rabbitmq-server
+      state: present
+
+  - name: Ensure a service is started
+    ansible.builtin.service:
+      name: rabbitmq-server  # Replace with the actual service name
+      state: started
+      enabled: yes # To ensure the service starts on boot
+
+  - name: create and provide permissions to user
+    community.rabbitmq.rabbitmq_user:
+      user: roboshop
+      password: roboshop123
+      permissions:
+        - vhost: /
+          configure_priv: .*
+          read_priv: .*
+          write_priv: .*
+      state: present
